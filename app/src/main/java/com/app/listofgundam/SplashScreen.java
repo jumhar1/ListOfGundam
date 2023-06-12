@@ -6,25 +6,40 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
+
+    private static int SPLASH_SCREEN = 5000;
+
+    //variable
+    Animation topAnim, bottomAnim;
+    ImageView image;
+    TextView logo, slogan;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //menghilangkan ActionBar
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
-            }
-        }, 6000l); //3000l = 3 detik
+        //Animation
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
+        //Hook
+        image = findViewById(R.id.tv_logoGundam);
+        slogan = findViewById(R.id.tv_listOf);
+        logo = findViewById(R.id.tv_gundam);
+
+        image.setAnimation(topAnim);
+        slogan.setAnimation(bottomAnim);
+        logo.setAnimation(bottomAnim);
     }
 }

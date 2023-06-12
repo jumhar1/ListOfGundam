@@ -25,7 +25,7 @@
         android:textAlignment="center"
         android:textSize="70sp"
         android:textStyle="italic"
-        tools:fontFamily="@font/bangers"/>
+        android:fontFamily="@font/bangers"/>
 
     <TextView
         android:id="@+id/tv_listOf"

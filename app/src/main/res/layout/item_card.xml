@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="6dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        >
+
+    <ImageView
+        android:id="@+id/iv_foto"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/tv_namaGundam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_foto"
+        android:text="Nama Gundam"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        />
+
+        <TextView
+            android:id="@+id/tv_namaPilot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_foto"
+            android:layout_below="@id/tv_namaGundam"
+            android:text="Nama Pilot"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+
+        <TextView
+            android:id="@+id/tv_Persenjataan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_foto"
+            android:layout_below="@id/tv_namaPilot"
+            android:text="Persenjataan"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+
+        <TextView
+            android:id="@+id/tv_Peralatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_foto"
+            android:layout_below="@id/tv_Persenjataan"
+            android:text="Fitur peralatan"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+
+        <TextView
+            android:id="@+id/tv_Deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_foto"
+            android:layout_below="@id/tv_Peralatan"
+            android:text="Deskripsi Singkat"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

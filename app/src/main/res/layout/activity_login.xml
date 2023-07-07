@@ -14,8 +14,8 @@
         android:id="@+id/iv_logoGundam"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo_gundam"
-        android:transitionName="logo_image"/>
+        android:transitionName="logo_image"
+        android:src="@drawable/logo_gundam"/>
 
     <TextView
         android:id="@+id/tv_hello"
